@@ -100,5 +100,4 @@ node_modules/
 hybris/data_old/
 
 # Arquivos de configuração temporária
-vivocore-spring-v2.xml
 package*.json

@@ -232,11 +232,11 @@ def platform = platform {
             extName 'webservicescommons'
             extName 'ywebservices'
 
-        // CUSTOM VIVO POC
-            extName 'vivopoccore'
-            extName 'vivopocfacades'
-            extName 'vivopocbackoffice'
-            extName 'vivopococc'
+        // CUSTOM POC
+            extName 'poccore'
+            extName 'pocfacades'
+            extName 'pocbackoffice'
+            extName 'pococc'
     }
 
     addons {
