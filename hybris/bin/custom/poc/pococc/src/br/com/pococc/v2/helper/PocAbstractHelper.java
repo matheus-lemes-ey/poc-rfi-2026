@@ -1,4 +1,4 @@
-package br.com.vivopococc.v2.helper;
+package br.com.pococc.v2.helper;
 
 import de.hybris.platform.commerceservices.search.pagedata.PageableData;
 import de.hybris.platform.webservicescommons.mapping.DataMapper;
@@ -6,7 +6,7 @@ import jakarta.annotation.Resource;
 import org.springframework.stereotype.Component;
 
 @Component
-public abstract class VivoPocAbstractHelper
+public abstract class PocAbstractHelper
 {
     @Resource(name = "dataMapper")
     private DataMapper dataMapper;

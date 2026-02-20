@@ -52,9 +52,9 @@
      -->
 
 	<!--
-	<bean id="vivopocbackofficeProfBean" class="com.hybris.backoffice.aop.YbackofficeProfilingAspect"/>
+	<bean id="pocbackofficeProfBean" class="com.hybris.backoffice.aop.YbackofficeProfilingAspect"/>
 	<aop:config proxy-target-class="true">
-  		<aop:aspect id="vivopocbackofficeProfAspect" ref="vivopocbackofficeProfBean" >
+  		<aop:aspect id="pocbackofficeProfAspect" ref="pocbackofficeProfBean" >
     	  <aop:pointcut id="profiledMethods"
 	      	expression="execution(* getModificationTime(..))" />
 	   		<aop:around pointcut-ref="profiledMethods" method="profile" />

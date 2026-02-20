@@ -7,10 +7,10 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="vivopocbackofficeService" class="br.com.vivopocbackoffice.services.VivopocbackofficeService" />
+	<bean id="pocbackofficeService" class="br.com.pocbackoffice.services.PocbackofficeService" />
 
-	<bean id="vivopocbackofficeLabelLocator" class="com.hybris.cockpitng.util.labels.ResourcesLabelLocator" scope="singleton" init-method="init" lazy-init="false">
-  		<property name="location" value="/vivopocbackoffice-backoffice-labels/"/>
+	<bean id="pocbackofficeLabelLocator" class="com.hybris.cockpitng.util.labels.ResourcesLabelLocator" scope="singleton" init-method="init" lazy-init="false">
+  		<property name="location" value="/pocbackoffice-backoffice-labels/"/>
   		<property name="name" value="labels"/>
   	</bean>
 

@@ -3,14 +3,14 @@
  Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
 --><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
 
-    <extension abstractclassprefix="Generated" classprefix="Vivopoccore" jaloLogicFree="true" managername="VivopoccoreManager" managersuperclass="de.hybris.platform.jalo.extension.Extension" name="vivopoccore" usemaven="true">
+    <extension abstractclassprefix="Generated" classprefix="Poccore" jaloLogicFree="true" managername="PoccoreManager" managersuperclass="de.hybris.platform.jalo.extension.Extension" name="poccore" usemaven="true">
                   
         <!-- for more information on maven managed libraries please consult https://wiki.hybris.com/x/Nq8sDQ -->
         <!-- you should add all required extensions to this list, except platform extensions which are automatically required -->
         <!-- <requires-extension name="cms"/> -->
         <requires-extension name="acceleratorservices"/>
 
-        <coremodule generated="true" manager="br.com.vivopoccore.jalo.VivopoccoreManager" packageroot="br.com.vivopoccore"/>
+        <coremodule generated="true" manager="br.com.poccore.jalo.PoccoreManager" packageroot="br.com.poccore"/>
 
     </extension>
 </extensioninfo>

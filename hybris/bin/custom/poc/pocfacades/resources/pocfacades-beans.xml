@@ -11,16 +11,16 @@
 	<!--
 		Example Data POJO
 	
-	<bean class="br.com.vivopocfacades.data.AbstractPojo" abstract="true">
+	<bean class="br.com.pocfacades.data.AbstractPojo" abstract="true">
 		<property name="id" type="String"/>
 		<property name="flag" type="boolean"/>
 	</bean>
 
-	<bean class="br.com.vivopocfacades.data.MyPojo" extends="br.com.vivopocfacades.data.AbstractPojo">
+	<bean class="br.com.pocfacades.data.MyPojo" extends="br.com.pocfacades.data.AbstractPojo">
 		<property name="message" type="String"/>
 	</bean>
 
-	<bean class="br.com.vivopocfacades.data.AnnotatedPojo">
+	<bean class="br.com.pocfacades.data.AnnotatedPojo">
 
 		<import type="javax.xml.bind.annotation.XmlRootElement"/>
 		<import type="javax.xml.bind.annotation.XmlElements"/>

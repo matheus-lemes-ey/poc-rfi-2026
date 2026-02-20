@@ -1,4 +1,4 @@
-package br.com.vivopococc.v2.controller;
+package br.com.pococc.v2.controller;
 
 import com.google.common.collect.Lists;
 import de.hybris.platform.commerceservices.customer.DuplicateUidException;
@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @Controller
-public class VivoPocBaseController
+public class PocBaseController
 {
     protected static final String DEFAULT_PAGE_SIZE = "20";
     protected static final String DEFAULT_CURRENT_PAGE = "0";
@@ -37,7 +37,7 @@ public class VivoPocBaseController
     protected static final String HEADER_TOTAL_COUNT = "X-Total-Count";
     protected static final String INVALID_REQUEST_BODY_ERROR_MESSAGE = "Request body is invalid or missing";
 
-    private static final Logger LOG = LoggerFactory.getLogger(VivoPocBaseController.class);
+    private static final Logger LOG = LoggerFactory.getLogger(PocBaseController.class);
 
     @Resource(name = "dataMapper")
     private DataMapper dataMapper;

@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
  */
-package br.com.vivopoccore.service.impl;
+package br.com.poccore.service.impl;
 
 import de.hybris.platform.catalog.model.CatalogUnawareMediaModel;
 import de.hybris.platform.core.model.media.MediaModel;
@@ -17,12 +17,12 @@ import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import br.com.vivopoccore.service.VivopoccoreService;
+import br.com.poccore.service.PoccoreService;
 
 
-public class DefaultVivopoccoreService implements VivopoccoreService
+public class DefaultPoccoreService implements PoccoreService
 {
-	private static final Logger LOG = LoggerFactory.getLogger(DefaultVivopoccoreService.class);
+	private static final Logger LOG = LoggerFactory.getLogger(DefaultPoccoreService.class);
 
 	private MediaService mediaService;
 	private ModelService modelService;
@@ -73,7 +73,7 @@ public class DefaultVivopoccoreService implements VivopoccoreService
 
 	private InputStream getImageStream()
 	{
-		return DefaultVivopoccoreService.class.getResourceAsStream("/vivopoccore/sap-hybris-platform.png");
+		return DefaultPoccoreService.class.getResourceAsStream("/poccore/sap-hybris-platform.png");
 	}
 
 	public void setMediaService(final MediaService mediaService)

@@ -13,7 +13,7 @@
 <!--
 		<itemtype generate="true"
 		   code="MyProduct"
-		   jaloclass="br.com.vivopocfacades.jalo.MyProduct"
+		   jaloclass="br.com.pocfacades.jalo.MyProduct"
 		   extends="Product"
 		   autocreate="true"
 	   >

@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
     <title>Login</title>
-    <c:set var="cssUrl"><c:url value="/static/vivopocfacades-webapp.css"/></c:set>
+    <c:set var="cssUrl"><c:url value="/static/pocfacades-webapp.css"/></c:set>
     <link rel="stylesheet" href="${fn:escapeXml(cssUrl)}" type="text/css" media="screen, projection"/>
 </head>
 <body>

@@ -1,14 +1,14 @@
 /*
  * Copyright (c) 2022 SAP SE or an SAP affiliate company. All rights reserved
  */
-package br.com.vivopocbackoffice.constants;
+package br.com.pocbackoffice.constants;
 
 @SuppressWarnings({"deprecation","squid:CallToDeprecatedMethod"})
-public final class VivopocbackofficeConstants extends GeneratedVivopocbackofficeConstants
+public final class PocbackofficeConstants extends GeneratedPocbackofficeConstants
 {
-	public static final String EXTENSIONNAME = "vivopocbackoffice";
+	public static final String EXTENSIONNAME = "pocbackoffice";
 	
-	private VivopocbackofficeConstants()
+	private PocbackofficeConstants()
 	{
 		//empty
 	}

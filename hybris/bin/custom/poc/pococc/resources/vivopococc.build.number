@@ -1,10 +1,10 @@
 #Ant properties
 #Fri Feb 06 01:35:11 UTC 2026
 builddate=20260206 0134
-description=vivopococc
+description=pococc
 group.id=de.hybris.platform
 module.name=platform-module
-name=vivopococc
+name=pococc
 releasedate=20260206 0134
 vendor=hybris
 version=2211-jdk21.8

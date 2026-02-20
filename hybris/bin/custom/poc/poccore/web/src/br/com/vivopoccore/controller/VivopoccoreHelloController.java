@@ -1,27 +1,27 @@
 /*
  * Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
  */
-package br.com.vivopoccore.controller;
+package br.com.poccore.controller;
 
-import static br.com.vivopoccore.constants.VivopoccoreConstants.PLATFORM_LOGO_CODE;
+import static br.com.poccore.constants.PoccoreConstants.PLATFORM_LOGO_CODE;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import br.com.vivopoccore.service.VivopoccoreService;
+import br.com.poccore.service.PoccoreService;
 
 
 @Controller
-public class VivopoccoreHelloController
+public class PoccoreHelloController
 {
 	@Autowired
-	private VivopoccoreService vivopoccoreService;
+	private PoccoreService poccoreService;
 
 	@GetMapping("/")
 	public String printWelcome(final ModelMap model)
 	{
-		model.addAttribute("logoUrl", vivopoccoreService.getHybrisLogoUrl(PLATFORM_LOGO_CODE));
+		model.addAttribute("logoUrl", poccoreService.getHybrisLogoUrl(PLATFORM_LOGO_CODE));
 		return "welcome";
 	}
 }

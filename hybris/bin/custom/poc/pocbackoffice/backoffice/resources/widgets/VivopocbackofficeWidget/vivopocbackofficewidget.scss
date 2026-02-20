@@ -1,13 +1,13 @@
 @charset "utf-8";
-@import "./support/vivopocbackofficewidget-variables.scss";
+@import "./support/pocbackofficewidget-variables.scss";
 
 .yw-labelstyle
 {
-	color: $vivopocbackoffice-label-text-color;
+	color: $pocbackoffice-label-text-color;
 }
 
-.vivopocbackoffice-container {
-	background: $vivopocbackoffice-container-background;
-	font-family: $vivopocbackoffice-container-font-family;
-	font-size: $vivopocbackoffice-container-font-size;
+.pocbackoffice-container {
+	background: $pocbackoffice-container-background;
+	font-family: $pocbackoffice-container-font-family;
+	font-size: $pocbackoffice-container-font-size;
 }

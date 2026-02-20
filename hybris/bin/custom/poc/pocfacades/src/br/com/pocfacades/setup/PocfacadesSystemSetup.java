@@ -1,36 +1,36 @@
 /*
  * Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
  */
-package br.com.vivopocfacades.setup;
+package br.com.pocfacades.setup;
 
-import static br.com.vivopocfacades.constants.VivopocfacadesConstants.PLATFORM_LOGO_CODE;
+import static br.com.pocfacades.constants.PocfacadesConstants.PLATFORM_LOGO_CODE;
 
 import de.hybris.platform.core.initialization.SystemSetup;
 
 import java.io.InputStream;
 
-import br.com.vivopocfacades.constants.VivopocfacadesConstants;
-import br.com.vivopocfacades.service.VivopocfacadesService;
+import br.com.pocfacades.constants.PocfacadesConstants;
+import br.com.pocfacades.service.PocfacadesService;
 
 
-@SystemSetup(extension = VivopocfacadesConstants.EXTENSIONNAME)
-public class VivopocfacadesSystemSetup
+@SystemSetup(extension = PocfacadesConstants.EXTENSIONNAME)
+public class PocfacadesSystemSetup
 {
-	private final VivopocfacadesService vivopocfacadesService;
+	private final PocfacadesService pocfacadesService;
 
-	public VivopocfacadesSystemSetup(final VivopocfacadesService vivopocfacadesService)
+	public PocfacadesSystemSetup(final PocfacadesService pocfacadesService)
 	{
-		this.vivopocfacadesService = vivopocfacadesService;
+		this.pocfacadesService = pocfacadesService;
 	}
 
 	@SystemSetup(process = SystemSetup.Process.ALL, type = SystemSetup.Type.ESSENTIAL)
 	public void createEssentialData()
 	{
-		vivopocfacadesService.createLogo(PLATFORM_LOGO_CODE);
+		pocfacadesService.createLogo(PLATFORM_LOGO_CODE);
 	}
 
 	private InputStream getImageStream()
 	{
-		return VivopocfacadesSystemSetup.class.getResourceAsStream("/vivopocfacades/sap-hybris-platform.png");
+		return PocfacadesSystemSetup.class.getResourceAsStream("/pocfacades/sap-hybris-platform.png");
 	}
 }

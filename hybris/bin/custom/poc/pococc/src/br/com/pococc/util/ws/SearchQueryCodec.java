@@ -1,4 +1,4 @@
-package br.com.vivopococc.util.ws;
+package br.com.pococc.util.ws;
 
 public interface SearchQueryCodec<QUERY>
 {

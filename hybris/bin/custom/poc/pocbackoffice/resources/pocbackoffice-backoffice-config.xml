@@ -4,9 +4,9 @@
 -->
 <config xmlns="http://www.hybris.com/cockpit/config">
 
-	<!-- vivopocbackoffice UI configuration should be provided here -->
+	<!-- pocbackoffice UI configuration should be provided here -->
 
-	<!--<context component="component-code" module="vivopocbackoffice">-->
+	<!--<context component="component-code" module="pocbackoffice">-->
 		<!--Please check documentation for code snippets for specific components-->
 	<!--</context>-->
 

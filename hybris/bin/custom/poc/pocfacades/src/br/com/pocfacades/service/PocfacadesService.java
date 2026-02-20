@@ -1,9 +1,9 @@
 /*
  * Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
  */
-package br.com.vivopocfacades.service;
+package br.com.pocfacades.service;
 
-public interface VivopocfacadesService
+public interface PocfacadesService
 {
 	String getHybrisLogoUrl(String logoCode);
 

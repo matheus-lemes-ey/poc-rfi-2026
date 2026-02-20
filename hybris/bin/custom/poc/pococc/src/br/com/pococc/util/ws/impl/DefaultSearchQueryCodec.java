@@ -1,6 +1,6 @@
-package br.com.vivopococc.util.ws.impl;
+package br.com.pococc.util.ws.impl;
 
-import br.com.vivopococc.util.ws.SearchQueryCodec;
+import br.com.pococc.util.ws.SearchQueryCodec;
 import de.hybris.platform.commerceservices.search.solrfacetsearch.data.SolrSearchQueryData;
 import de.hybris.platform.commerceservices.search.solrfacetsearch.data.SolrSearchQueryTermData;
 

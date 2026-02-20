@@ -1,10 +1,10 @@
 #Ant properties
 #Fri Feb 06 01:34:48 UTC 2026
 builddate=20260206 0134
-description=vivopocbackoffice
+description=pocbackoffice
 group.id=de.hybris.platform
 module.name=platform-module
-name=vivopocbackoffice
+name=pocbackoffice
 releasedate=20260206 0134
 vendor=hybris
 version=2211-jdk21.8

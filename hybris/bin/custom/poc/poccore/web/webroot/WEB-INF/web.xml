@@ -2,13 +2,13 @@
 <!--
  Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
 -->
-<web-app id="vivopoccore" version="5.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<web-app id="poccore" version="5.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="https://jakarta.ee/xml/ns/jakartaee"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          metadata-complete="true">
     <absolute-ordering/>
 
-    <display-name>vivopoccore</display-name>
+    <display-name>poccore</display-name>
 
     <login-config>
         <auth-method>BASIC</auth-method>
@@ -60,7 +60,7 @@
     </filter>
 
     <filter>
-        <filter-name>vivopoccorePlatformFilterChain</filter-name>
+        <filter-name>poccorePlatformFilterChain</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
     </filter>
 
@@ -82,7 +82,7 @@
     </filter-mapping>
 
     <filter-mapping>
-        <filter-name>vivopoccorePlatformFilterChain</filter-name>
+        <filter-name>poccorePlatformFilterChain</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
@@ -104,8 +104,8 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
-            WEB-INF/config/vivopoccore-spring-mvc-config.xml
-            WEB-INF/config/vivopoccore-web-app-config.xml
+            WEB-INF/config/poccore-spring-mvc-config.xml
+            WEB-INF/config/poccore-web-app-config.xml
         </param-value>
     </context-param>
 

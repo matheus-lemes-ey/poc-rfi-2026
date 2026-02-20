@@ -6,8 +6,8 @@
 	xsi:noNamespaceSchemaLocation="http://www.hybris.com/schema/cockpitng/widgets.xsd">
 
     <widget-extension widgetId="backofficeMainSlot">
-        <widget id="vivopocbackoffice-perspective" widgetDefinitionId="br.com.vivopocbackoffice.widgets.vivopocbackofficewidget"
-            template="false" slotId="perspectives" title="Hello vivopocbackoffice">
+        <widget id="pocbackoffice-perspective" widgetDefinitionId="br.com.pocbackoffice.widgets.pocbackofficewidget"
+            template="false" slotId="perspectives" title="Hello pocbackoffice">
         </widget>
     </widget-extension>
 

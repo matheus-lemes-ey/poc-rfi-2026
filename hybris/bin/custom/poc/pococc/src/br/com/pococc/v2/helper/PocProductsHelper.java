@@ -1,6 +1,6 @@
-package br.com.vivopococc.v2.helper;
+package br.com.pococc.v2.helper;
 
-import br.com.vivopococc.util.ws.SearchQueryCodec;
+import br.com.pococc.util.ws.SearchQueryCodec;
 import de.hybris.platform.commercefacades.product.data.ProductData;
 import de.hybris.platform.commercefacades.search.ProductSearchFacade;
 import de.hybris.platform.commercefacades.search.data.SearchStateData;
@@ -24,7 +24,7 @@ import org.springframework.stereotype.Component;
 import java.util.*;
 
 @Component
-public class VivoPocProductsHelper extends VivoPocAbstractHelper
+public class PocProductsHelper extends PocAbstractHelper
 {
     private static final int NEXT_FILTER = 2;
     private static final String IDENTIFIER_FIELD_KEY = "code";
@@ -33,7 +33,7 @@ public class VivoPocProductsHelper extends VivoPocAbstractHelper
 
     @Resource(name = "productSearchFacade")
     private ProductSearchFacade<ProductData> productSearchFacade;
-    @Resource(name = "vivoPocSearchQueryCodec")
+    @Resource(name = "PocSearchQueryCodec")
     private SearchQueryCodec<SolrSearchQueryData> searchQueryCodec;
     @Resource(name = "solrSearchStateConverter")
     private Converter<SolrSearchQueryData, SearchStateData> solrSearchStateConverter;
@@ -96,7 +96,7 @@ public class VivoPocProductsHelper extends VivoPocAbstractHelper
     }
 
     /**
-     * @deprecated since 2211.28. Please use {@link VivoPocProductsHelper#searchProducts(String, String, int, int, String, String, String)}
+     * @deprecated since 2211.28. Please use {@link PocProductsHelper#searchProducts(String, String, int, int, String, String, String)}
      *             instead.
      */
     @Deprecated(since = "2211.28", forRemoval = true)
@@ -174,7 +174,7 @@ public class VivoPocProductsHelper extends VivoPocAbstractHelper
     }
 
     /**
-     * @deprecated since 2211.28. Please use {@link VivoPocProductsHelper#searchProducts(String, String, int, int, String, String, String)}
+     * @deprecated since 2211.28. Please use {@link PocProductsHelper#searchProducts(String, String, int, int, String, String, String)}
      *             instead.
      */
     @Deprecated(since = "2211.28", forRemoval = true)

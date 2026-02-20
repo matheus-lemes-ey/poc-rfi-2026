@@ -1,9 +1,9 @@
 /*
  * Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
  */
-package br.com.vivopoccore.service;
+package br.com.poccore.service;
 
-public interface VivopoccoreService
+public interface PoccoreService
 {
 	String getHybrisLogoUrl(String logoCode);
 

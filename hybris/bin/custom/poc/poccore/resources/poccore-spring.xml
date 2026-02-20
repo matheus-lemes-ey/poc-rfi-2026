@@ -29,21 +29,21 @@
 	
 	<!--  Example how to override a manager -->
 	<!--
-	<bean id="core.productManager"   class="br.com.vivopoccore.jalo.VivopoccoreProductManager" 	init-method="init"	destroy-method="destroy" />
+	<bean id="core.productManager"   class="br.com.poccore.jalo.PoccoreProductManager" 	init-method="init"	destroy-method="destroy" />
 	-->
 	
 	
  	<!--  Example how to configure the class to use for jalo session creation -->
 	<!--
 	<bean id="jalosession"   class="de.hybris.platform.jalo.JaloSessionFactory">
-		<property name="targetClassName" value="br.com.vivopoccore.jalo.VivopoccoreJaloSession"/>
+		<property name="targetClassName" value="br.com.poccore.jalo.PoccoreJaloSession"/>
 	</bean>
 	-->
 
 	
 	<!--  Example how to override an item  -->
 	<!-- 
-	<bean id="de.hybris.platform.jalo.product.Product" class="br.com.vivopoccore.jalo.VivopoccoreProduct" scope="prototype" />		
+	<bean id="de.hybris.platform.jalo.product.Product" class="br.com.poccore.jalo.PoccoreProduct" scope="prototype" />
  	-->
 
 	<!--  
@@ -52,9 +52,9 @@
      -->
 	
 	<!-- 
-	<bean id="vivopoccoreProfBean" class="br.com.vivopoccore.aop.VivopoccoreProfilingAspect"/>
+	<bean id="poccoreProfBean" class="br.com.poccore.aop.PoccoreProfilingAspect"/>
 	<aop:config proxy-target-class="true">
-  		<aop:aspect id="vivopoccoreProfAspect" ref="vivopoccoreProfBean" >
+  		<aop:aspect id="poccoreProfAspect" ref="poccoreProfBean" >
     	  <aop:pointcut id="profiledMethods" 
 	      	expression="execution(* getModificationTime(..))" />  	            
 	   		<aop:around pointcut-ref="profiledMethods" method="profile" />
@@ -71,12 +71,12 @@
 	       <aop:pointcut id="profiledMethods" expression="execution(* *(..))" />	
 	  -->
 	
-    <bean id="vivopoccoreSystemSetup" class="br.com.vivopoccore.setup.VivopoccoreSystemSetup">
+    <bean id="poccoreSystemSetup" class="br.com.poccore.setup.PoccoreSystemSetup">
         <!-- constructor arg injection example -->
-        <constructor-arg ref="vivopoccoreService"/>
+        <constructor-arg ref="poccoreService"/>
     </bean>
 
-    <bean id="vivopoccoreService" class="br.com.vivopoccore.service.impl.DefaultVivopoccoreService">
+    <bean id="poccoreService" class="br.com.poccore.service.impl.DefaultPoccoreService">
         <!-- setter injection example -->
         <property name="modelService" ref="modelService"/>
         <property name="mediaService" ref="mediaService"/>

@@ -7,121 +7,121 @@
  Build/Documentation
 
 	 before/after ant macro "clean"
-		 <macrodef name="vivopocbackoffice_before_clean"/>
-		 <macrodef name="vivopocbackoffice_after_clean"/>
+		 <macrodef name="pocbackoffice_before_clean"/>
+		 <macrodef name="pocbackoffice_after_clean"/>
 
 	 before/after ant macro "build"
-		 <macrodef name="vivopocbackoffice_before_build"/>
-		 <macrodef name="vivopocbackoffice_after_build"/>
+		 <macrodef name="pocbackoffice_before_build"/>
+		 <macrodef name="pocbackoffice_after_build"/>
 
 	 before/after ant macro "compile_core" - the core module of the extension
-		 <macrodef name="vivopocbackoffice_before_compile_core">
-		 <macrodef name="vivopocbackoffice_after_compile_core">
+		 <macrodef name="pocbackoffice_before_compile_core">
+		 <macrodef name="pocbackoffice_after_compile_core">
 
 	 before/after ant macro "compile_web" - the web module of the extension
-		 <macrodef name="vivopocbackoffice_before_compile_web" />
-		 <macrodef name="vivopocbackoffice_after_compile_web" />
+		 <macrodef name="pocbackoffice_before_compile_web" />
+		 <macrodef name="pocbackoffice_after_compile_web" />
 
 	 before/after ant macro "compile_hmc" - the hmc module of the extension
-		 <macrodef name="vivopocbackoffice_before_compile_hmc" />
-		 <macrodef name="vivopocbackoffice_after_compile_hmc" />
+		 <macrodef name="pocbackoffice_before_compile_hmc" />
+		 <macrodef name="pocbackoffice_after_compile_hmc" />
 
  Preparing extension
 
 	 will be called in the beginning of the ant call and only once (also when using multiple
 	 ant targets e.g. ant build yunittest)
-		 <macrodef name="vivopocbackoffice_only_once_prepare"/>
+		 <macrodef name="pocbackoffice_only_once_prepare"/>
 
  Creating ear module/production
 
 	 before/after ant macro "ear"
-		 <macrodef name="vivopocbackoffice_before_ear"/>
-		 <macrodef name="vivopocbackoffice_after_ear"/>
+		 <macrodef name="pocbackoffice_before_ear"/>
+		 <macrodef name="pocbackoffice_after_ear"/>
 
 	 before/after ant macro "production" - for hybris server only
-		 <macrodef name="vivopocbackoffice_before_production" />
-		 <macrodef name="vivopocbackoffice_after_production" />
+		 <macrodef name="pocbackoffice_before_production" />
+		 <macrodef name="pocbackoffice_after_production" />
 
  JUnit Test
 
 	 before/after ant macro "yunitinit"
-		 <macrodef name="vivopocbackoffice_before_yunitinit" />
-		 <macrodef name="vivopocbackoffice_after_yunitinit" />
+		 <macrodef name="pocbackoffice_before_yunitinit" />
+		 <macrodef name="pocbackoffice_after_yunitinit" />
 
 	 before/after ant macro "yunit"
-		 <macrodef name="vivopocbackoffice_before_yunit" />
-		 <macrodef name="vivopocbackoffice_after_yunit" />
+		 <macrodef name="pocbackoffice_before_yunit" />
+		 <macrodef name="pocbackoffice_after_yunit" />
 
  Distribution package
 
  	 before/after ant macro "dist" - internal target; only for use when platform is available in source code
-		 <macrodef name="vivopocbackoffice_after_dist"/>
-		 <macrodef name="vivopocbackoffice_before_dist"/>
+		 <macrodef name="pocbackoffice_after_dist"/>
+		 <macrodef name="pocbackoffice_before_dist"/>
 
 	 before/after ant macro "dist_copy" - internal target; only for use when platform is available in source code
-		 <macrodef name="vivopocbackoffice_before_dist_copy"/>
-		 <macrodef name="vivopocbackoffice_after_dist_copy"/>
+		 <macrodef name="pocbackoffice_before_dist_copy"/>
+		 <macrodef name="pocbackoffice_after_dist_copy"/>
 
  	 With these filters you can override the default extension filters defined in platform/resources/ant/dist/filtersets.xml
- 	  	 <patternset id="extension.vivopocbackoffice.binary.filter">
+ 	  	 <patternset id="extension.pocbackoffice.binary.filter">
  	  	  	 <patternset refid="extension.filter" />
  	  	  	 <exclude name="**/*-source.jar" />
  	  	 </patternset>
- 	  	 <patternset id="extension.vivopocbackoffice.source.filter">
+ 	  	 <patternset id="extension.pocbackoffice.source.filter">
  	  	  	 <exclude name="**/bin/**" />
  	  	 </patternset>
 
  Backoffice module
 
  	 before/after ant macro "backoffice" - internal target; only for use when extensin is a backoffice module
-		 <macrodef name="vivopocbackoffice_before_clean_backoffice"/>
-		 <macrodef name="vivopocbackoffice_after_clean_backoffice"/>
-		 <macrodef name="vivopocbackoffice_before_compile_backoffice"/>
-		 <macrodef name="vivopocbackoffice_after_compile_backoffice"/>
+		 <macrodef name="pocbackoffice_before_clean_backoffice"/>
+		 <macrodef name="pocbackoffice_after_clean_backoffice"/>
+		 <macrodef name="pocbackoffice_before_compile_backoffice"/>
+		 <macrodef name="pocbackoffice_after_compile_backoffice"/>
 
---><project name="vivopocbackoffice_buildcallbacks">
+--><project name="pocbackoffice_buildcallbacks">
     	
-    <property name="vivopocbackofficeWebFragmentSrc" value="${ext.vivopocbackoffice.path}/resources/web-fragment.xml"/>
+    <property name="pocbackofficeWebFragmentSrc" value="${ext.pocbackoffice.path}/resources/web-fragment.xml"/>
     	
-    <property name="vivopocbackofficeWebFragmentDestJar" value="${ext.backoffice.path}/web/webroot/WEB-INF/lib/webfragmentExt_vivopocbackoffice.jar"/>
+    <property name="pocbackofficeWebFragmentDestJar" value="${ext.backoffice.path}/web/webroot/WEB-INF/lib/webfragmentExt_pocbackoffice.jar"/>
     	
-
-	
 
 	
-    <macrodef name="vivopocbackoffice_after_clean">
+
+	
+    <macrodef name="pocbackoffice_after_clean">
         		
         <sequential>
             			
-            <vivopocbackoffice_remove_web_fragment/>
+            <pocbackoffice_remove_web_fragment/>
             		
         </sequential>
         	
     </macrodef>
     	
-    <macrodef name="vivopocbackoffice_after_build">
+    <macrodef name="pocbackoffice_after_build">
         		
         <sequential>
             			
-            <vivopocbackoffice_remove_web_fragment/>
+            <pocbackoffice_remove_web_fragment/>
             			
-            <vivopocbackoffice_create_web_fragment/>
+            <pocbackoffice_create_web_fragment/>
             		
         </sequential>
         	
     </macrodef>
     	
-    <macrodef name="vivopocbackoffice_remove_web_fragment">
+    <macrodef name="pocbackoffice_remove_web_fragment">
         		
         <sequential>
             			
             <if>
                 				
-                <available file="${vivopocbackofficeWebFragmentDestJar}"/>
+                <available file="${pocbackofficeWebFragmentDestJar}"/>
                 				
                 <then>
                     					
-                    <delete file="${vivopocbackofficeWebFragmentDestJar}"/>
+                    <delete file="${pocbackofficeWebFragmentDestJar}"/>
                     				
                 </then>
                 			
@@ -131,21 +131,21 @@
         	
     </macrodef>
     	
-    <macrodef name="vivopocbackoffice_create_web_fragment">
+    <macrodef name="pocbackoffice_create_web_fragment">
         		
         <sequential>
             			
             <if>
                 				
-                <available file="${vivopocbackofficeWebFragmentSrc}"/>
+                <available file="${pocbackofficeWebFragmentSrc}"/>
                 				
                 <then>
                     					
                     <sequential>
                         						
-                        <jar destfile="${vivopocbackofficeWebFragmentDestJar}">
+                        <jar destfile="${pocbackofficeWebFragmentDestJar}">
                             							
-                            <metainf file="${vivopocbackofficeWebFragmentSrc}"/>
+                            <metainf file="${pocbackofficeWebFragmentSrc}"/>
                             						
                         </jar>
                         					
@@ -159,7 +159,7 @@
         	
     </macrodef>
     	
-    <patternset id="vivopocbackoffice.localization.pattern">
+    <patternset id="pocbackoffice.localization.pattern">
         		
         <!-- core and hmc  -->
         		
@@ -203,10 +203,10 @@
         	
     </patternset>
     	
-    <macrodef name="vivopocbackoffice_before_build">
+    <macrodef name="pocbackoffice_before_build">
 		<sequential>
-			<register_sass_extension extensionname="vivopocbackoffice"/>
-			<register_sass_extension extensionname="vivopocbackoffice" resources="resources" destination=""/>
+			<register_sass_extension extensionname="pocbackoffice"/>
+			<register_sass_extension extensionname="pocbackoffice" resources="resources" destination=""/>
 		</sequential>
 	</macrodef>
     

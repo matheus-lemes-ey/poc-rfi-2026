@@ -1,6 +1,6 @@
-package br.com.vivopococc.v2.controller;
+package br.com.pococc.v2.controller;
 
-import br.com.vivopococc.v2.helper.VivoPocProductsHelper;
+import br.com.pococc.v2.helper.PocProductsHelper;
 import de.hybris.platform.commercefacades.product.ProductFacade;
 import de.hybris.platform.commerceservices.request.mapping.annotation.RequestMappingOverride;
 import de.hybris.platform.commercewebservices.core.product.data.ReviewDataList;
@@ -18,25 +18,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@Tag(name = "Vivo Poc Products")
+@Tag(name = " Poc Products")
 @RequestMapping(value = "/{baseSiteId}/products")
-public class VivoPocProductsController extends VivoPocBaseController
+public class PocProductsController extends PocBaseController
 {
-    private static final Logger LOG = LoggerFactory.getLogger(VivoPocProductsController.class);
+    private static final Logger LOG = LoggerFactory.getLogger(PocProductsController.class);
 
     private static final String PRINCIPAL_ANONYMOUS_KEY = "toggle.product.review.principal.anonymization.enabled";
 
     @Resource(name = "cwsProductFacade")
     private ProductFacade productFacade;
 
-    @Resource(name = "vivoPocProductsHelper")
-    private VivoPocProductsHelper vivoPocProductsHelper;
+    @Resource(name = "PocProductsHelper")
+    private PocProductsHelper PocProductsHelper;
 
     @Resource(name = "configurationService")
     private ConfigurationService configurationService;
 
     @GetMapping("/{productCode}/reviews")
-    @RequestMappingOverride(priorityProperty = "vivopococc.VivoPocProductsController.getProductReviews.priority")
+    @RequestMappingOverride(priorityProperty = "pococc.PocProductsController.getProductReviews.priority")
     @ResponseBody
     @Operation(operationId = "getProductReviews", summary = "Retrieves the reviews of a product.", description = "Retrieves all the reviews for a product. To limit the number of reviews returned, use the maxCount parameter.")
     @ApiBaseSiteIdParam
@@ -50,7 +50,7 @@ public class VivoPocProductsController extends VivoPocBaseController
         reviewDataList.setReviews(productFacade.getReviews(productCode, maxCount));
         if (configurationService.getConfiguration().getBoolean(PRINCIPAL_ANONYMOUS_KEY, true))
         {
-            vivoPocProductsHelper.anonymizeReviewPrincipal(reviewDataList);
+            PocProductsHelper.anonymizeReviewPrincipal(reviewDataList);
         }
         return getDataMapper().map(reviewDataList, ReviewListWsDTO.class, fields);
     }

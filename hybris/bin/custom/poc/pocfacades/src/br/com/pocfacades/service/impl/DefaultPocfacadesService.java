@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
  */
-package br.com.vivopocfacades.service.impl;
+package br.com.pocfacades.service.impl;
 
 import de.hybris.platform.catalog.model.CatalogUnawareMediaModel;
 import de.hybris.platform.core.model.media.MediaModel;
@@ -17,12 +17,12 @@ import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import br.com.vivopocfacades.service.VivopocfacadesService;
+import br.com.pocfacades.service.PocfacadesService;
 
 
-public class DefaultVivopocfacadesService implements VivopocfacadesService
+public class DefaultPocfacadesService implements PocfacadesService
 {
-	private static final Logger LOG = LoggerFactory.getLogger(DefaultVivopocfacadesService.class);
+	private static final Logger LOG = LoggerFactory.getLogger(DefaultPocfacadesService.class);
 
 	private MediaService mediaService;
 	private ModelService modelService;
@@ -73,7 +73,7 @@ public class DefaultVivopocfacadesService implements VivopocfacadesService
 
 	private InputStream getImageStream()
 	{
-		return DefaultVivopocfacadesService.class.getResourceAsStream("/vivopocfacades/sap-hybris-platform.png");
+		return DefaultPocfacadesService.class.getResourceAsStream("/pocfacades/sap-hybris-platform.png");
 	}
 
 	public void setMediaService(final MediaService mediaService)

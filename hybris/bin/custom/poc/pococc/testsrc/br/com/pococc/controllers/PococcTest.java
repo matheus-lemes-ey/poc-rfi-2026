@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
  */
-package br.com.vivopococc.controllers;
+package br.com.pococc.controllers;
 
 import static org.junit.Assert.assertTrue;
 
@@ -14,14 +14,14 @@ import org.junit.Test;
 
 
 /**
- * JUnit Tests for the Vivopococc extension
+ * JUnit Tests for the Pococc extension
  */
-public class VivopococcTest extends HybrisJUnit4TransactionalTest
+public class PococcTest extends HybrisJUnit4TransactionalTest
 {
 	/**
 	 * Edit the local|project.properties to change logging behaviour (properties log4j.*).
 	 */
-	private static final Logger LOG = Logger.getLogger(VivopococcTest.class.getName());
+	private static final Logger LOG = Logger.getLogger(PococcTest.class.getName());
 
 	@Before
 	public void setUp()
@@ -39,7 +39,7 @@ public class VivopococcTest extends HybrisJUnit4TransactionalTest
 	 * This is a sample test method.
 	 */
 	@Test
-	public void testVivopococc()
+	public void testPococc()
 	{
 		final boolean testTrue = true;
 		assertTrue("true is not true", testTrue);

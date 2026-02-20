@@ -1,36 +1,36 @@
 /*
  * Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
  */
-package br.com.vivopoccore.setup;
+package br.com.poccore.setup;
 
-import static br.com.vivopoccore.constants.VivopoccoreConstants.PLATFORM_LOGO_CODE;
+import static br.com.poccore.constants.PoccoreConstants.PLATFORM_LOGO_CODE;
 
 import de.hybris.platform.core.initialization.SystemSetup;
 
 import java.io.InputStream;
 
-import br.com.vivopoccore.constants.VivopoccoreConstants;
-import br.com.vivopoccore.service.VivopoccoreService;
+import br.com.poccore.constants.PoccoreConstants;
+import br.com.poccore.service.PoccoreService;
 
 
-@SystemSetup(extension = VivopoccoreConstants.EXTENSIONNAME)
-public class VivopoccoreSystemSetup
+@SystemSetup(extension = PoccoreConstants.EXTENSIONNAME)
+public class PoccoreSystemSetup
 {
-	private final VivopoccoreService vivopoccoreService;
+	private final PoccoreService poccoreService;
 
-	public VivopoccoreSystemSetup(final VivopoccoreService vivopoccoreService)
+	public PoccoreSystemSetup(final PoccoreService poccoreService)
 	{
-		this.vivopoccoreService = vivopoccoreService;
+		this.poccoreService = poccoreService;
 	}
 
 	@SystemSetup(process = SystemSetup.Process.ALL, type = SystemSetup.Type.ESSENTIAL)
 	public void createEssentialData()
 	{
-		vivopoccoreService.createLogo(PLATFORM_LOGO_CODE);
+		poccoreService.createLogo(PLATFORM_LOGO_CODE);
 	}
 
 	private InputStream getImageStream()
 	{
-		return VivopoccoreSystemSetup.class.getResourceAsStream("/vivopoccore/sap-hybris-platform.png");
+		return PoccoreSystemSetup.class.getResourceAsStream("/poccore/sap-hybris-platform.png");
 	}
 }

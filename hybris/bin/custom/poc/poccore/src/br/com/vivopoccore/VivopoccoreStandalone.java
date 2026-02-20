@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
  */
-package br.com.vivopoccore;
+package br.com.poccore;
 
 import de.hybris.platform.core.Registry;
 import de.hybris.platform.jalo.JaloSession;
@@ -14,11 +14,11 @@ import de.hybris.platform.util.Utilities;
  * commandline.<br>
  * To run this from commandline, just use the following command:<br>
  * <code>
- * java -jar bootstrap/bin/ybootstrap.jar "new br.com.vivopoccore.VivopoccoreStandalone().run();"
+ * java -jar bootstrap/bin/ybootstrap.jar "new br.com.poccore.PoccoreStandalone().run();"
  * </code> From eclipse, just run as Java Application. Note that you maybe need to add all other projects like
  * ext-commerce, ext-pim to the Launch configuration classpath.
  */
-public class VivopoccoreStandalone
+public class PoccoreStandalone
 {
 	/**
 	 * Main class to be able to run it directly as a java program.
@@ -27,7 +27,7 @@ public class VivopoccoreStandalone
 	 */
 	public static void main(final String[] args)
 	{
-		new VivopoccoreStandalone().run();
+		new PoccoreStandalone().run();
 	}
 
 	public void run()

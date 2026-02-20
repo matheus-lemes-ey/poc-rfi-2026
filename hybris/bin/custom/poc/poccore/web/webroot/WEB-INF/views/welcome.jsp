@@ -2,14 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Welcome to vivopoccore</title>
-    <link rel="stylesheet" href="<c:url value="/static/vivopoccore-webapp.css"/>" type="text/css"
+    <title>Welcome to poccore</title>
+    <link rel="stylesheet" href="<c:url value="/static/poccore-webapp.css"/>" type="text/css"
           media="screen, projection"/>
 </head>
 <div class="container">
     <img src="<c:url value="${logoUrl}" />" alt="Hybris platform logo"/>
 
-    <h2>Welcome to "vivopoccore" extension</h2>
+    <h2>Welcome to "poccore" extension</h2>
 
     <h3><strong>Getting started</strong></h3>
 
@@ -21,15 +21,15 @@
         </p>
 
         <ul>
-            <li><strong>resources/vivopoccore-items.xml</strong> - here you can model your items</li>
-            <li><strong>resources/vivopoccore-spring.xml</strong> - here you can define your services</li>
-            <li><strong>web/webroot/WEB-INF/config/vivopoccore-spring-mvc-config.xml</strong> - here is a Spring MVC related
+            <li><strong>resources/poccore-items.xml</strong> - here you can model your items</li>
+            <li><strong>resources/poccore-spring.xml</strong> - here you can define your services</li>
+            <li><strong>web/webroot/WEB-INF/config/poccore-spring-mvc-config.xml</strong> - here is a Spring MVC related
                 configuration
             </li>
-            <li><strong>web/webroot/WEB-INF/config/vivopoccore-web-app-config.xml</strong> - here you can define web related services,
+            <li><strong>web/webroot/WEB-INF/config/poccore-web-app-config.xml</strong> - here you can define web related services,
                 facades etc.
             </li>
-            <li><strong>web/webroot/WEB-INF/config/vivopoccore-spring-security-config.xml</strong> - here you can configure your Spring Security settings</li>
+            <li><strong>web/webroot/WEB-INF/config/poccore-spring-security-config.xml</strong> - here you can configure your Spring Security settings</li>
             <li><strong>web/webroot/WEB-INF/web.xml</strong> - here you can configure filters, servlets etc.</li>
             <li><strong>web/webroot/WEB-INF/views</strong> - here you can keep your jsp pages</li>
             <li><strong>web/webroot/static</strong> - here you can keep your static files, javascripts, css etc.</li>

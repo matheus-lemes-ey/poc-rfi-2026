@@ -1,10 +1,10 @@
 /*
  * Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
  */
-package br.com.vivopoccore.service.impl;
+package br.com.poccore.service.impl;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static br.com.vivopoccore.constants.VivopoccoreConstants.PLATFORM_LOGO_CODE;
+import static br.com.poccore.constants.PoccoreConstants.PLATFORM_LOGO_CODE;
 
 import de.hybris.bootstrap.annotations.IntegrationTest;
 import de.hybris.platform.core.model.media.MediaModel;
@@ -17,8 +17,8 @@ import jakarta.annotation.Resource;
 import org.junit.Before;
 import org.junit.Test;
 
-import br.com.vivopoccore.service.VivopoccoreService;
-import br.com.vivopoccore.service.impl.DefaultVivopoccoreService;
+import br.com.poccore.service.PoccoreService;
+import br.com.poccore.service.impl.DefaultPoccoreService;
 
 
 /**
@@ -28,27 +28,27 @@ import br.com.vivopoccore.service.impl.DefaultVivopoccoreService;
  * in mind that by default it assumes that annotated field name matches the Spring Bean ID.
  */
 @IntegrationTest
-public class DefaultVivopoccoreServiceIntegrationTest extends ServicelayerBaseTest
+public class DefaultPoccoreServiceIntegrationTest extends ServicelayerBaseTest
 {
 	@Resource
-	private VivopoccoreService vivopoccoreService;
+	private PoccoreService poccoreService;
 	@Resource
 	private FlexibleSearchService flexibleSearchService;
 
 	@Before
 	public void setUp() throws Exception
 	{
-		vivopoccoreService.createLogo(PLATFORM_LOGO_CODE);
+		poccoreService.createLogo(PLATFORM_LOGO_CODE);
 	}
 
 	@Test
 	public void shouldReturnProperUrlForLogo() throws Exception
 	{
 		// given
-		final String logoCode = "vivopoccorePlatformLogo";
+		final String logoCode = "poccorePlatformLogo";
 
 		// when
-		final String logoUrl = vivopoccoreService.getHybrisLogoUrl(logoCode);
+		final String logoUrl = poccoreService.getHybrisLogoUrl(logoCode);
 
 		// then
 		assertThat(logoUrl).isNotNull();

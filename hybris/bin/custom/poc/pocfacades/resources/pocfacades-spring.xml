@@ -29,21 +29,21 @@
 	
 	<!--  Example how to override a manager -->
 	<!--
-	<bean id="core.productManager"   class="br.com.vivopocfacades.jalo.VivopocfacadesProductManager" 	init-method="init"	destroy-method="destroy" />
+	<bean id="core.productManager"   class="br.com.pocfacades.jalo.PocfacadesProductManager" 	init-method="init"	destroy-method="destroy" />
 	-->
 	
 	
  	<!--  Example how to configure the class to use for jalo session creation -->
 	<!--
 	<bean id="jalosession"   class="de.hybris.platform.jalo.JaloSessionFactory">
-		<property name="targetClassName" value="br.com.vivopocfacades.jalo.VivopocfacadesJaloSession"/>
+		<property name="targetClassName" value="br.com.pocfacades.jalo.PocfacadesJaloSession"/>
 	</bean>
 	-->
 
 	
 	<!--  Example how to override an item  -->
 	<!-- 
-	<bean id="de.hybris.platform.jalo.product.Product" class="br.com.vivopocfacades.jalo.VivopocfacadesProduct" scope="prototype" />		
+	<bean id="de.hybris.platform.jalo.product.Product" class="br.com.pocfacades.jalo.PocfacadesProduct" scope="prototype" />
  	-->
 
 	<!--  
@@ -52,9 +52,9 @@
      -->
 	
 	<!-- 
-	<bean id="vivopocfacadesProfBean" class="br.com.vivopocfacades.aop.VivopocfacadesProfilingAspect"/>
+	<bean id="pocfacadesProfBean" class="br.com.pocfacades.aop.PocfacadesProfilingAspect"/>
 	<aop:config proxy-target-class="true">
-  		<aop:aspect id="vivopocfacadesProfAspect" ref="vivopocfacadesProfBean" >
+  		<aop:aspect id="pocfacadesProfAspect" ref="pocfacadesProfBean" >
     	  <aop:pointcut id="profiledMethods" 
 	      	expression="execution(* getModificationTime(..))" />  	            
 	   		<aop:around pointcut-ref="profiledMethods" method="profile" />
@@ -71,12 +71,12 @@
 	       <aop:pointcut id="profiledMethods" expression="execution(* *(..))" />	
 	  -->
 	
-    <bean id="vivopocfacadesSystemSetup" class="br.com.vivopocfacades.setup.VivopocfacadesSystemSetup">
+    <bean id="pocfacadesSystemSetup" class="br.com.pocfacades.setup.PocfacadesSystemSetup">
         <!-- constructor arg injection example -->
-        <constructor-arg ref="vivopocfacadesService"/>
+        <constructor-arg ref="pocfacadesService"/>
     </bean>
 
-    <bean id="vivopocfacadesService" class="br.com.vivopocfacades.service.impl.DefaultVivopocfacadesService">
+    <bean id="pocfacadesService" class="br.com.pocfacades.service.impl.DefaultPocfacadesService">
         <!-- setter injection example -->
         <property name="modelService" ref="modelService"/>
         <property name="mediaService" ref="mediaService"/>

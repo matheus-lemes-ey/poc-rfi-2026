@@ -4,15 +4,15 @@
 -->
 <widget-definition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="http://www.hybris.com/schema/cockpitng/widget-definition.xsd"
-	id="br.com.vivopocbackoffice.widgets.vivopocbackofficewidget">
-	<name>vivopocbackoffice Sample Widget</name>
-	<description>vivopocbackoffice Sample Widget</description>
-	<defaultTitle>vivopocbackoffice Sample Widget</defaultTitle>
+	id="br.com.pocbackoffice.widgets.pocbackofficewidget">
+	<name>pocbackoffice Sample Widget</name>
+	<description>pocbackoffice Sample Widget</description>
+	<defaultTitle>pocbackoffice Sample Widget</defaultTitle>
 	<author>Extgen</author>
 	<version>1.0</version>
-	<view src="vivopocbackofficewidget.zul" />
+	<view src="pocbackofficewidget.zul" />
 	<keywords>
-		<keyword>vivopocbackoffice</keyword>
+		<keyword>pocbackoffice</keyword>
 	</keywords>
-	<controller class="br.com.vivopocbackoffice.widgets.VivopocbackofficeController" />
+	<controller class="br.com.pocbackoffice.widgets.PocbackofficeController" />
 </widget-definition>

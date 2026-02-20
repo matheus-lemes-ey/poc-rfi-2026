@@ -1,10 +1,10 @@
 /*
  * Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
  */
-package br.com.vivopocfacades.service.impl;
+package br.com.pocfacades.service.impl;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static br.com.vivopocfacades.constants.VivopocfacadesConstants.PLATFORM_LOGO_CODE;
+import static br.com.pocfacades.constants.PocfacadesConstants.PLATFORM_LOGO_CODE;
 
 import de.hybris.bootstrap.annotations.IntegrationTest;
 import de.hybris.platform.core.model.media.MediaModel;
@@ -17,8 +17,8 @@ import jakarta.annotation.Resource;
 import org.junit.Before;
 import org.junit.Test;
 
-import br.com.vivopocfacades.service.VivopocfacadesService;
-import br.com.vivopocfacades.service.impl.DefaultVivopocfacadesService;
+import br.com.pocfacades.service.PocfacadesService;
+import br.com.pocfacades.service.impl.DefaultPocfacadesService;
 
 
 /**
@@ -28,27 +28,27 @@ import br.com.vivopocfacades.service.impl.DefaultVivopocfacadesService;
  * in mind that by default it assumes that annotated field name matches the Spring Bean ID.
  */
 @IntegrationTest
-public class DefaultVivopocfacadesServiceIntegrationTest extends ServicelayerBaseTest
+public class DefaultPocfacadesServiceIntegrationTest extends ServicelayerBaseTest
 {
 	@Resource
-	private VivopocfacadesService vivopocfacadesService;
+	private PocfacadesService pocfacadesService;
 	@Resource
 	private FlexibleSearchService flexibleSearchService;
 
 	@Before
 	public void setUp() throws Exception
 	{
-		vivopocfacadesService.createLogo(PLATFORM_LOGO_CODE);
+		pocfacadesService.createLogo(PLATFORM_LOGO_CODE);
 	}
 
 	@Test
 	public void shouldReturnProperUrlForLogo() throws Exception
 	{
 		// given
-		final String logoCode = "vivopocfacadesPlatformLogo";
+		final String logoCode = "pocfacadesPlatformLogo";
 
 		// when
-		final String logoUrl = vivopocfacadesService.getHybrisLogoUrl(logoCode);
+		final String logoUrl = pocfacadesService.getHybrisLogoUrl(logoCode);
 
 		// then
 		assertThat(logoUrl).isNotNull();
