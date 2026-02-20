@@ -45,7 +45,7 @@ public class PocProductsController extends PocBaseController
             @Parameter(description = "Maximum number of reviews.") @RequestParam(required = false) final Integer maxCount,
             @ApiFieldsParam @RequestParam(defaultValue = DEFAULT_FIELD_SET) final String fields)
     {
-        LOG.info("VIVO POC CUSTOM GET PRODUCT REVIEWS");
+        LOG.info("POC CUSTOM GET PRODUCT REVIEWS");
         final ReviewDataList reviewDataList = new ReviewDataList();
         reviewDataList.setReviews(productFacade.getReviews(productCode, maxCount));
         if (configurationService.getConfiguration().getBoolean(PRINCIPAL_ANONYMOUS_KEY, true))
