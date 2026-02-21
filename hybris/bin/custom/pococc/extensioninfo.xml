@@ -11,6 +11,8 @@
                 		
         
         <requires-extension name="commercewebservices"/>
+        <requires-extension name="commercewebservicescommons"/>
+        <requires-extension name="pocfacades"/>
                 		
         
         <coremodule generated="true" manager="com.br.pococc.occ.jalo.PococcManager" packageroot="com.br.pococc.occ"/>
