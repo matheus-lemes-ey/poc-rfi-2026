@@ -31,6 +31,8 @@ README
 /hybris/roles
 /hybris/config
 /hybris/bin/custom/yb2bacceleratorstorefront
+!/hybris/config/local.properties
+!/hybris/config/licence/hybrislicence.jar
 
 
 installer/*

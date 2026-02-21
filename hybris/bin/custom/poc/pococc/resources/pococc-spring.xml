@@ -17,4 +17,6 @@
 
 	<bean id="PocSearchQueryCodec" class="br.com.pococc.util.ws.impl.DefaultSearchQueryCodec"/>
 
+	<!-- <bean id="PocProductsHelper"  class="br.com.pococc.v2.helper.PocProductsHelper"/> -->
+
 </beans>
