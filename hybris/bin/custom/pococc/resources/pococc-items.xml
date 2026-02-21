@@ -13,7 +13,7 @@
 <!--
 		<itemtype generate="true"
 		   code="MyProduct"
-		   jaloclass="br.com.pococc.jalo.MyProduct"
+		   jaloclass="com.br.pococc.occ.jalo.MyProduct"
 		   extends="Product"
 		   autocreate="true"
 	   >

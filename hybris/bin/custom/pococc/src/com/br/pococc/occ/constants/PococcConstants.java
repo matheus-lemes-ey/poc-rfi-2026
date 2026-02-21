@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
  */
-package br.com.pococc.constants;
+package com.br.pococc.occ.constants;
 
 public class PococcConstants extends GeneratedPococcConstants
 {
